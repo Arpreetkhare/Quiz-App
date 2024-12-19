@@ -25,8 +25,7 @@ This is a simple Django-based quiz application. The app allows a user to:
 ### Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo-url/quiz-app.git
-   
+   git clone https://github.com/Arpreetkhare/Quiz-App.git
 
 2. **install dependencies**
     ```bash
