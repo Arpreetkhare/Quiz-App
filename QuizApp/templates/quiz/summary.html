@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Summary</title>
+</head>
+<body>
+    <h1>Quiz Summary</h1>
+
+    <p><strong>Total Questions Answered:</strong> {{ total }}</p>
+    <p><strong>Correct Answers:</strong> {{ correct }}</p>
+    <p><strong>Incorrect Answers:</strong> {{ incorrect }}</p>
+
+    <a href="{% url 'start_quiz' %}">Start a New Quiz</a>
+</body>
+</html>

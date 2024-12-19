@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+
+<h1>Welcome to the Quiz</h1>
+<p>Answer the following questions:</p>
+
+<form method="post" action="{% url 'submit_answer' %}">
+    {% csrf_token %}
+    
+    {% for question in questions %}
+        <div style="margin-bottom: 20px;">
+            <h2>Question {{ forloop.counter }}: {{ question.question_text }}</h2>
+            
+            <input type="radio" name="answers[{{ question.id }}]" value="1" required> {{ question.option_1 }}<br>
+            <input type="radio" name="answers[{{ question.id }}]" value="2" required> {{ question.option_2 }}<br>
+            <input type="radio" name="answers[{{ question.id }}]" value="3" required> {{ question.option_3 }}<br>
+            <input type="radio" name="answers[{{ question.id }}]" value="4" required> {{ question.option_4 }}<br>
+        </div>
+    {% endfor %}
+    
+    <button type="submit">Submit Answers</button>
+</form>
+
+</body>
+</html>
